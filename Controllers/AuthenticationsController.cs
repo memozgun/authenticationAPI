@@ -13,11 +13,11 @@ using Microsoft.IdentityModel.Tokens;
 namespace AuthenticationAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class AuthController : Controller
+    public class AuthenticationsController : Controller
     {
         private readonly IAuthentications _repo;
         private readonly IConfiguration _config;
-        public AuthController(IAuthentications repo, IConfiguration config)
+        public AuthenticationsController(IAuthentications repo, IConfiguration config)
         {
             _config = config;
             _repo = repo;
