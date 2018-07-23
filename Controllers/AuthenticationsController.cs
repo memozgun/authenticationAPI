@@ -3,21 +3,21 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using DatingApp.API.Data;
-using DatingApp.API.Dtos;
-using DatingApp.API.Models;
+using AuthenticationAPI.Data;
+using AuthenticationAPI.Dtos;
+using AuthenticationAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DatingApp.API.Controllers
+namespace AuthenticationAPI.Controllers
 {
     [Route("api/[controller]")]
     public class AuthController : Controller
     {
-        private readonly IAuthRepository _repo;
+        private readonly IAuthentications _repo;
         private readonly IConfiguration _config;
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        public AuthController(IAuthentications repo, IConfiguration config)
         {
             _config = config;
             _repo = repo;

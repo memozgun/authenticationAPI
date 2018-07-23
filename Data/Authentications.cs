@@ -1,14 +1,14 @@
 using System;
 using System.Threading.Tasks;
-using DatingApp.API.Models;
+using AuthenticationAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DatingApp.API.Data
+namespace AuthenticationAPI.Data
 {
-    public class AuthRepository : IAuthRepository
+    public class Authentications : IAuthentications
     {
         private readonly DataContext _context;
-        public AuthRepository(DataContext context)
+        public Authentications(DataContext context)
         {
             _context = context;
         }
